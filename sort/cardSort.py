@@ -1,10 +1,10 @@
 import heapq
 
-n = int(inpit())
+n = int(input())
 
 heap = []
 for i in range(n):
-    data = int(input())
+    data = int(int(input()))
     heapq.heappush(heap, data)
 
 result = 0
