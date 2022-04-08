@@ -9,9 +9,11 @@ for x in data:
     else:
         value += int(x)
 
+
 result.sort()
 
 if value != 0:
     result.append(str(value))
+    
 
 print(''.join(result))

@@ -1,3 +1,6 @@
+from re import L
+
+
 n = input()
 length = len(n)
 summary = 0
