@@ -1,9 +1,6 @@
-from re import L
-
-
 n, m = map(int, input().split())
 data = []
-temp = [[0] * m for _ in range(n)]
+temp = [[0] * m for _ in range(n)] # 벽을 설치한 뒤의 맵 리스트
 
 for _ in range(n):
     data.append(list(map(int, input().split())))
@@ -32,10 +29,9 @@ def get_score():
                 score += 1
     return score
 
-
 def dfs(count):
     global result
-    if counnt == 3:
+    if count == 3:
         for i in range(n):
             for j in range(m):
                 temp[i][j] = data[i][j]
@@ -44,9 +40,9 @@ def dfs(count):
             for j in range(m):
                 if temp[i][j] == 2:
                     virus(i, j)
+
         result = max(result, get_score())
         return
-    
     for i in range(n):
         for j in range(m):
             if data[i][j] == 0:
@@ -58,3 +54,5 @@ def dfs(count):
 
 dfs(0)
 print(result)
+
+

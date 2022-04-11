@@ -7,10 +7,13 @@ for r in range(n):
     data = list(map(int, input().split()))
     for c in range(n):
         if data[c] == 1:
-            house.append((r, c))
+            house.append((r, c)) # 일반 집
         elif data[c] == 2:
-            chicken.append((r, c))
+            chicken.append((r, c)) # 치킨 집
 
+    
+
+# 모든 치킨집 중에서 m개의 치킨집을 뽑는 조합 계산
 candidates = list(combinations(chicken, m))
 
 def get_sum(candidate):
@@ -20,7 +23,7 @@ def get_sum(candidate):
         for cx, cy in candidate:
             temp = min(temp, abs(hx - cx) + abs(hy - cy))
         result += temp
-    
+
     return result
 
 result = 1e9
@@ -28,4 +31,3 @@ for candidate in candidates:
     result = min(result, get_sum(candidate))
 
 print(result)
-
