@@ -1,6 +1,8 @@
 n, m = map(int, input().split())
+
 data = []
-temp = [[0] * m for _ in range(n)] # 벽을 설치한 뒤의 맵 리스트
+
+temp = [[0] * m for _ in range(n)]
 
 for _ in range(n):
     data.append(list(map(int, input().split())))
@@ -21,6 +23,7 @@ def virus(x, y):
                 virus(nx, ny)
 
 
+
 def get_score():
     score = 0
     for i in range(n):
@@ -29,8 +32,11 @@ def get_score():
                 score += 1
     return score
 
+
+
 def dfs(count):
     global result
+
     if count == 3:
         for i in range(n):
             for j in range(m):
@@ -43,6 +49,7 @@ def dfs(count):
 
         result = max(result, get_score())
         return
+
     for i in range(n):
         for j in range(m):
             if data[i][j] == 0:
@@ -52,7 +59,6 @@ def dfs(count):
                 data[i][j] = 0
                 count -= 1
 
+
 dfs(0)
 print(result)
-
-
