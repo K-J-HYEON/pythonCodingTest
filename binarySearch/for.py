@@ -10,20 +10,14 @@ def binary_search(array, target, start, end):
         
         else:
             start = mid + 1
-
     return None
 
-
-n = int(input())
+n, target = list(map(int, input().split()))
 array = list(map(int, input().split()))
-array.sort()
 
-m = int(input())
-x = list(map(int, input().split()))
+result = binary_search(array, target, 0, n - 1)
+if result == None:
+    print("원소가 존재하지 않습니다.")
 
-for i in x:
-    result = binary_search(arary, i, 0, n - 1)
-    if result != None:
-        print('yes', end=' ')
-    else:
-        print('no', end=' ')
+else:
+    print(result + 1)

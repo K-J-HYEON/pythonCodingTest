@@ -12,10 +12,10 @@ while(start <= end):
     for x in array:
         if x > mid:
             total += x - mid
-    
+
     if total < m:
         end = mid - 1
-    
+
     else:
         result = mid
         start = mid + 1
