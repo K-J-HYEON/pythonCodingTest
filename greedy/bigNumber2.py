@@ -1,11 +1,16 @@
-n, m = map(int, input().split())
+n, m, k = map(int, input().split())
+
+data = list(map(int, input().split()))
+
+data.sort()
+first = data[n - 1]
+second = data[n - 2]
+
+count = int(m / (k + 1)) * k
+count += m % (k + 1)
 
 result = 0
-for i in range(n):
-    data = list(map(int, input().split()))
-    min_value = 10001
-    for a in data:
-        min_value = min(min_value, a)
-    result = max(result, min_valiue)
+result += (count) + first
+result += (m - count) * second
 
 print(result)
