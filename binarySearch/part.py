@@ -4,26 +4,34 @@ def binary_search(array, target, start, end):
 
         if array[mid] == target:
             return mid
-
+        
         elif array[mid] > target:
             end = mid - 1
-        
+
         else:
             start = mid + 1
 
+    
     return None
 
-
 n = int(input())
-array = list(map(int, input().split()))
+
+array= list(map(int, input().split()))
+
+array = list(map(int, input().split())
+
 array.sort()
 
 m = int(input())
+
 x = list(map(int, input().split()))
 
 for i in x:
-    result = binary_search(arary, i, 0, n - 1)
+    result = binary_search(array, i, 0, n - 1)
+
     if result != None:
-        print('yes', end=' ')
+        print('yes', end = ' ')
     else:
-        print('no', end=' ')
+        print('no', end = ' ')
+
+
