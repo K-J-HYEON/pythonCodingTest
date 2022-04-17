@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+n, m = map(int, inpit().split())
 
 graph = []
 for i in range(n):
@@ -16,8 +16,8 @@ def dfs(x, y):
         dfs(x + 1, y)
         dfs(x, y + 1)
         return True
-
     return False
+
 
 result = 0
 for i in range(n):
