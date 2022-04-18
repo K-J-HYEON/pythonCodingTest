@@ -6,9 +6,10 @@ def dfs(graph, v, visited):
             dfs(grapn, i, visited)
 
 
+
 graph = [
     [],
-    [2, 3, 8],
+    [2, 3, 8],ㅇ
     [1, 7],
     [1, 4, 5],
     [3, 5],
