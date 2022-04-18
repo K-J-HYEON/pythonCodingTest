@@ -20,8 +20,7 @@ def turn_left():
     direction -= 1
     if direction == -1:
         direction = 3
-
-
+        
 count = 1
 
 turn_time = 0
