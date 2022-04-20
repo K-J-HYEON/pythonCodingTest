@@ -1,6 +1,7 @@
 import heapq
 import sys
 input = sys.stdin.readline
+
 INF = int(1e9)
 
 n, m = map(int, input().split())
@@ -13,30 +14,27 @@ for _ in range(m):
     graph[a].append((b, 1))
     graph[b].append((a, 1))
 
+
 def dijkstra(start):
     q = []
-    # 시작 노드로 가기 위한 최단 경로는 0으로 설정하여, 큐에 삽입
     heapq.heappush(q, (0, start))
     distance[start] = 0
     while q:
-        # 가장 최단 거리가 짧은 노드에 대한 정보를 꺼내기
         dist, now = heapq.heappop(q)
-        # 현재 노드가 이미 처리된 적이 있으면
+
         if distance[now] < dist:
             continue
-
         for i in graph[now]:
             cost = dist + i[1]
-
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
 
-# 다익스트라 알고리즘 수행
 dijkstra(start)
 
 max_node = 0
 max_distance = 0
+
 result = []
 
 for i in range(1, n + 1):
@@ -44,6 +42,7 @@ for i in range(1, n + 1):
         max_node = i
         max_distance = distance[i]
         result = [max_node]
+
     elif max_distance == distance[i]:
         result.append(i)
 

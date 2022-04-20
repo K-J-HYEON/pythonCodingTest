@@ -15,7 +15,6 @@ for i in range(1, v + 1):
         indegree[i] += 1
         graph[x].append(i)
 
-
 def topology_sort():
     result = copy.deepcopy(time)
     q = deque()
@@ -24,10 +23,12 @@ def topology_sort():
         if indegree[i] == 0:
             q.append(i)
 
+    
     while q:
         now = q.popleft()
+
         for i in graph[now]:
-            result[i] = max(result[i], result[now], time[i])
+            result[i] = max(result[i], result[now] + time[i])
             indegree[i] -= 1
 
             if indegree[i] == 0:

@@ -6,15 +6,11 @@ indegree = [0] * (v + 1)
 
 graph = [[] for i in range(v + 1)]
 
-
 for _ in range(e):
     a, b = map(int, input().split())
     graph[a].append(b)
     indegree[b] += 1
 
-
-
-# 위상 정렬 함수
 def topology_sort():
     result = []
     q = deque()
@@ -25,17 +21,16 @@ def topology_sort():
 
     while q:
         now = q.popleft()
+
         result.append(now)
+
         for i in graph[now]:
             indegree[i] -= 1
-
             if indegree[i] == 0:
                 q.append(i)
 
-
-
-for i in result:
-    print(i, end = ' ')
-
+    for i in result:
+        print(i, end = ' ')
 
 topology_sort()
+

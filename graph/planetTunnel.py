@@ -1,19 +1,21 @@
-from re import L
-
+# kruskal algorithm 수행
 
 def find_parent(parent, x):
     if parent[x] != x:
         parent[x] = find_parent(parent, parent[x])
     return parent[x]
 
+
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
+    
     if a < b:
         parent[b] = a
-
     else:
         parent[a] = b
+
+    
 
 n = int(input())
 parent = [0] * (n + 1)
@@ -38,6 +40,7 @@ x.sort()
 y.sort()
 z.sort()
 
+# 인접한 노드들로부터 간선 정보를 추출하여 처리
 for i in range(n - 1):
     edges.append((x[i + 1][0] - x[i][0], x[i][1], x[i + 1][1]))
     edges.append((y[i + 1][0] - y[i][0], y[i][1], x[i + 1][1]))
@@ -52,5 +55,7 @@ for edge in edges:
         union_parent(parent, a, b)
         result += cost
 
-
 print(result)
+
+
+    

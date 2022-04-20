@@ -5,10 +5,8 @@ value = 0
 for x in data:
     if x.isalpha():
         result.append(x)
-
     else:
         value += int(x)
-
 
 result.sort()
 

@@ -1,4 +1,5 @@
 data = input()
+
 count0 = 0
 count1 = 0
 
