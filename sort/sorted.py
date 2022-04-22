@@ -1,10 +1,12 @@
-# sorted
-array = [1]
+n = int(input())
 
-result = sorted(array)
-print(result)
+array = []
+for i in range(n):
+    input_data = input().split()
 
-# sort
-array2 = [2]
-array2.sort()
-print(array)
+    array.append(input_data[0], int(input_data[1]))
+
+    array = sorted(array, key=lambda student: student[1])
+
+    for student in array:
+        print(student[0], end = ' ')

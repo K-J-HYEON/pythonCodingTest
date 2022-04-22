@@ -1,4 +1,4 @@
-array = [1]
+array = []
 
 count = [0] * (max(array) + 1)
 
