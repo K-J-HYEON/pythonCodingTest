@@ -4,8 +4,10 @@ def binary_search(array, target, start, end):
 
         if array[mid] == target:
             return mid
+        
         elif array[mid] > target:
             end = mid - 1
+
         else:
             start = mid + 1
 
@@ -18,6 +20,6 @@ array = list(map(int, input().split()))
 result = binary_search(array, target, 0, n - 1)
 
 if result == None:
-    print()
+    print("~")
 else:
     print(result + 1)

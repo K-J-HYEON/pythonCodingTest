@@ -1,4 +1,5 @@
 n, m = map(int, input().split())
+
 array = []
 for i in range(n):
     array.append(int(input()))
@@ -11,8 +12,9 @@ for i in range(n):
         if d[j - array[i]] != 10001:
             d[j] = min(d[j], d[j - array[i]] + 1)
 
-
+    
 if d[m] == 10001:
     print(-1)
+
 else:
     print(d[m])
