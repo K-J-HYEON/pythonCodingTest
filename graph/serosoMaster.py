@@ -1,3 +1,11 @@
+# def find_parent(parent, x):
+#     if parent[x] != x:
+#         parent[x] = find_parent(parent, parent[x])
+
+#     return parent[x]
+
+
+
 def find_parent(parent, x):
     if parent[x] != x:
         parent[x] = find_parent(parent, parent[x])
@@ -7,8 +15,10 @@ def find_parent(parent, x):
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
+
     if a < b:
         parent[b] = a
+
     else:
         parent[a] = b
 
@@ -29,7 +39,5 @@ for i in range(1, v + 1):
 print()
 
 print('', end = '')
-
 for i in range(1, v + 1):
     print(parent[i], end = ' ')
-

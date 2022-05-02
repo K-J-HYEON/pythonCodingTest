@@ -3,14 +3,16 @@ def find_parent(parent, x):
         parent[x] = find_parent(parent, parent[x])
     return parent[x]
 
-
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
+
     if a < b:
         parent[b] = a
+
     else:
-        parent[a] = b
+        parent[a] = a
+
 
 v, e = map(int, input().split())
 parent = [0] * (v + 1)
@@ -18,18 +20,21 @@ parent = [0] * (v + 1)
 for i in range(1, v + 1):
     parent[i] = i
 
+cycle = False
+
+
 for i in range(e):
-    a, b = map(int, input().split())
-    union_parent(parent, a, b)
+    if find_parent(parent, a) == find_parent(parent, b):
+        cycle = True
+        break
 
-print('', end = ' ')
-for i in range(1, v + 1):
-    print(find_parent(parent, i), end = ' ')
+    else:
+        union_parent(parent, a, b)
 
-print()
+    
 
-print('', end = '')
+if cycle:
+    print('사이클이 발생했다.')
 
-for i in range(1, v + 1):
-    print(parent[i], end = ' ')
-
+else:
+    print('사이클이 발생 안했다.')
