@@ -1,4 +1,4 @@
-## Python으로 CodingTest 준비
+## 💻 Python으로 CodingTest 준비
 
 ### 기본 Grammer
 ### Greedy, 완전탐색
