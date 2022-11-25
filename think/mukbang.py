@@ -6,7 +6,7 @@ def solution(food_times, k):
 
     q = []
     for i in range(len(food_times)):
-        heapq.heappush(q, (foods_times[i], i + 1))
+        heapq.heappush(q, (food_times[i], i + 1))
 
     sum_value = 0
     previous = 0
