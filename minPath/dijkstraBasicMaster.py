@@ -35,11 +35,6 @@ def get_smallest_node():
             index = i
         return index
 
-
-
-
-
-
 def dijkstra(start):
     # 시작 노드 즉 출발 노드에 대해서 초기화
     distance[start] = 0
