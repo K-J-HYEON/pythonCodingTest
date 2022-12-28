@@ -12,7 +12,6 @@ for start in range(n):
         interval_sum += data[end]
         end += 1
 
-    
     # m일 때 카운트 증가
     if interval_sum == m:
         count += 1
