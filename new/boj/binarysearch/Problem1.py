@@ -1,5 +1,4 @@
 # 부품찾기 문제
-
 def binary_search(array, target, start, end):
     while start <= end:
         mid = (start + end) // 2
@@ -12,8 +11,6 @@ def binary_search(array, target, start, end):
         # 중간점 값보다 찾고자 하는 값 큰 경우 오른쪽 확인
         else:
             start = mid + 1
-
-
 
 n = int(input())
 array = list(map(int, input().split()))
