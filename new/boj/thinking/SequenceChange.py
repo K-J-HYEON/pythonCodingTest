@@ -1,20 +1,10 @@
-# boj 1551
-
-import sys
-input = sys.stdin.readline
-
-n, k = map(int, input().split())
-sequence = list(map(int, input().split(',')))
-
-temp = []
-
-for method_index in range(k):
-    for sequence_index in range(len(sequence) - 1):
-        temp.append(sequence[sequence_index + 1] - sequence[sequence_index])
-
-    sequence = temp
-    temp = []
-
-sequence = list(map(str, sequence))
-
-print(','.join(sequence))
+T = (int)(input())
+for i in range(T):
+    count = 0
+    k = int((input()))
+    n = int((input()))
+    f = [j for j in range(1, n + 1)]
+    for x in range(k):
+        for y in range(1, n):
+            f[y] += f[y - 1]
+    print(f[-1])
