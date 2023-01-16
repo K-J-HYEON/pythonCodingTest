@@ -1,13 +1,6 @@
 n = int(input())
+for i in range(1, n):
+    print('*'*i + ' '*2*(n-i) + '*'*i)
 
-cups = [1, 2, 3]
-for _ in range(n):
-    x, y = map(int, input().split())
-
-
-    xi = cups.index(x)
-    yi = cups.index(y)
-
-    cups[xi], cups[yi] = cups[yi], cups[xi]
-
-print(cups[0])
+for i in range(n, 0, -1):
+    print('*'*i + ' '*2*(n-i) + '*'*i)
