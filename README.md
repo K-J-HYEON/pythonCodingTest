@@ -12,4 +12,3 @@
 ### 이후에 생각나는거 적기
 
 # 📝 긱스코딩 참고(https://www.youtube.com/@nossi-dev)
-## 자료구조
