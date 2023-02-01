@@ -22,3 +22,5 @@ if n < 0: # 음수면 거슬러줄수 없다다    print(-1)
     print(-1)
 else:
     print(cnt)
+
+

@@ -18,3 +18,4 @@ for i in range(41):
 for _ in range(T):
     num = int(input())
     print(arr[num][0], arr[num][1])
+

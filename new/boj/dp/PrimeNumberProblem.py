@@ -20,3 +20,4 @@ else: # 참가국이 다를 경우 1, 2, 3등 출력
     print(*students[0][:2])
     print(*students[1][:2])
     print(*students[2][:2])
+
