@@ -3,6 +3,7 @@
 # postorder
 
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/
+# TreeBFS
 
 from collections import deque
 # root = [3, 9, 20, None, None, 15, 7]
@@ -11,7 +12,6 @@ from collections import deque
 #     def __init__(self):
 #         left = l
 #         right = r
-
 
 # levelorder
 # from collections import deque
@@ -27,7 +27,6 @@ from collections import deque
 # root.right = TreeNode(v=20)
 # root.right.left = TreeNode(v=15)
 # root.right.right = TreeNode(v=7)
-#
 #
 # def maxDepth(root):
 #     max_depth = 0
@@ -48,7 +47,8 @@ from collections import deque
 
 
 
-# postorder
+
+# ## postorder - 재귀
 from collections import deque
 
 class TreeNode():
