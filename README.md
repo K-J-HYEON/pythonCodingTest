@@ -9,6 +9,3 @@
 ### 최단경로(다익스트라, 플로이드 워셜, 벨만 포드, etc)
 ### 그래프 이론
 ### Queue, Heap, Tree 자료구조
-### 이후에 생각나는거 적기
-
-# 📝 긱스코딩 참고(https://www.youtube.com/@nossi-dev)
