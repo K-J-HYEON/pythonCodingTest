@@ -17,26 +17,29 @@ def canVisitAllRooms(rooms):
         return True
     else:
         return False
+    return visited
+
+
+def canVisitAllRooms(rooms):
+    visited = [False] * len(rooms)
+
+    def dfs(v):
+        visited[v] = True
+        for next_v in rooms[v]:
+            if visited[next_v] == False:
+                dfs(next_v)
+
+    dfs(0)
+
+    return all(visited)
+
+    if len(visited) == len(rooms):
+        return True
+
+    else:
+        return False
+
     # return visited
-
-
-# def canVisitAllRooms(rooms):
-#     visited = [False] * len(rooms)
-#
-#     def dfs(v, visited):
-#         visited[v] = True
-#         for next_v in rooms[v]:
-#             if visited[next_v] == False:
-#                 dfs(next_v, visited)
-#
-#     dfs(0, visited)
-#     if len(visited) == len(rooms):
-#         return True
-#
-#     else:
-#         return False
-#
-#     # return visited
 
 
 # def canVisitAllRooms(rooms):
@@ -64,10 +67,10 @@ def canVisitAllRooms(rooms):
 #
 #     # v에 연결되어있는 모든 vertex 방문할 것이다.
 #
-#     def bfs():
+#     def bfs(v):
 #         queue = deque()
-#         queue.append(0)
-#         visited[0] = True
+#         queue.append(v)
+#         visited[v] = True
 #         while queue:
 #             cur_v = queue.popleft()
 #             for next_v in rooms[cur_v]:
@@ -75,7 +78,7 @@ def canVisitAllRooms(rooms):
 #                     queue.append(next_v)
 #                     visited[next_v] = True
 #
-#     bfs()
+#     bfs(0)
 #
 #     return all(visited)
 
