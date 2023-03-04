@@ -1,7 +1,5 @@
 # https://leetcode.com/problems/valid-parentheses/
 
-# https://leetcode.com/problems/daily-temperatures/
-
 # 시간 복잡도 10 ** 8 넘지말자
 # 1<= x <=10**4
 # n ** 2 / nlogn / n / log n으로 풀자
@@ -16,7 +14,7 @@ def isValid(s):
         elif p == "{":
             stack.append("}")
         elif p == "[":
-            stack.append("}")
+            stack.append("]")
         elif not stack or stack.pop() != p:
             return False
     return not stack
