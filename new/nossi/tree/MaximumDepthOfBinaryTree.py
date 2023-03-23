@@ -29,6 +29,7 @@ def maxDepth(root):
     if root is None:
         return max_depth
     q = deque()
+    # queue (()) 필수
     q.append((root, 1))
     while q:
         cur_node, cur_depth = q.popleft()
