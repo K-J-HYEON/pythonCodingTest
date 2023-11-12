@@ -1,3 +1,5 @@
+# https://sophuu.tistory.com/18
+
 T = int(input())
 
 record = {}
